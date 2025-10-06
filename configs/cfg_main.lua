@@ -8,8 +8,6 @@
 --  Need support? Join our Discord server for help: https://discord.gg/rscripts
 --
 Config.Effects = {
-  enableSpeed = true,
-  enableStamina = true,
   enableDamageReduction = true,  -- neu
   damageReductionMultiplier = 0.5,  -- 50 % Schaden
   duration = 30000,  -- in Millisekunden z. B. 30 Sekunden
