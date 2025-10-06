@@ -72,6 +72,27 @@ local function triggerJunkEffects()
     end)
 end
 
+local function applyEnergyDrinkEffects()
+  local ped = PlayerPedId()
+
+  if Config.Effects.enableDamageReduction then
+    -- Setzt den eingehenden Schaden auf einen Bruchteil
+    SetPlayerDamageModifier(PlayerId(), Config.Effects.damageReductionMultiplier)
+  end
+
+  -- Timer für Dauer
+  Citizen.SetTimeout(Config.Effects.duration, function()
+    -- Effekte rückgängig machen
+    if Config.Effects.enableSpeed then
+      SetRunSprintMultiplierForPlayer(PlayerId(), 1.0)
+    end
+    if Config.Effects.enableDamageReduction then
+      SetPlayerDamageModifier(PlayerId(), 1.0)
+    end
+    -- ggf. noch andere Rücksetzungen
+  end)
+end
+
 lib.callback.register('r_energydrinks:drinkJunk', function(color)
     if not color then return end
     if effectsActive then Core.Interface.notify(_L('notify_title'), _L('already_junked'), 'error') return end
