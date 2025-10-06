@@ -75,7 +75,7 @@ end
 local function applyEnergyDrinkEffects()
   local ped = PlayerPedId()
 
-  if Config.Effects.enableDamageReduction then
+  if Cfg.Effects.enableDamageReduction then
     -- Setzt den eingehenden Schaden auf einen Bruchteil
     SetPlayerDamageModifier(PlayerId(), Config.Effects.damageReductionMultiplier)
   end
@@ -83,10 +83,10 @@ local function applyEnergyDrinkEffects()
   -- Timer für Dauer
   Citizen.SetTimeout(Config.Effects.duration, function()
     -- Effekte rückgängig machen
-    if Config.Effects.enableSpeed then
+    if Cfg.Effects.enableSpeed then
       SetRunSprintMultiplierForPlayer(PlayerId(), 1.0)
     end
-    if Config.Effects.enableDamageReduction then
+    if Cfg.Effects.enableDamageReduction then
       SetPlayerDamageModifier(PlayerId(), 1.0)
     end
     -- ggf. noch andere Rücksetzungen
