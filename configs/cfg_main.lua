@@ -7,11 +7,7 @@
 --
 --  Need support? Join our Discord server for help: https://discord.gg/rscripts
 --
-Config.Effects = {
-  enableDamageReduction = true,  -- neu
-  damageReductionMultiplier = 0.5,  -- 50 % Schaden
-  duration = 30000,  -- in Millisekunden z. B. 30 Sekunden
-}
+
 Cfg = {
     --  ___  ___ _ ____   _____ _ __
     -- / __|/ _ \ '__\ \ / / _ \ '__|
@@ -44,6 +40,11 @@ Cfg = {
             Duration = 60    -- Determines how long the above effects will last on a player.
         },
     },
+  Effects = {
+    enableDamageReduction = true,  -- neu
+    damageReductionMultiplier = 0.5,  -- 50 % Schaden
+    duration = 30000,  -- in Millisekunden z. B. 30 Sekunden
+  },
     --      _      _
     --   __| | ___| |__  _   _  __ _
     --  / _` |/ _ \ '_ \| | | |/ _` |
