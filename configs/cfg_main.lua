@@ -40,7 +40,7 @@ Cfg = {
             Duration = 60    -- Determines how long the above effects will last on a player.
         },
     },
-  Effects = {
+  drgs.Effects = {
     enableDamageReduction = true,  -- neu
     damageReductionMultiplier = 0.5,  -- 50 % Schaden
     duration = 30000,  -- in Millisekunden z. B. 30 Sekunden
